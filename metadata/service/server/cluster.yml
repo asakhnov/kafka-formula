@@ -1,0 +1,14 @@
+applications:
+- kafka
+classes:
+- service.kafka.support
+parameters:
+  kafka:
+  kafka:
+    conf:
+      broker:
+        id: ${_param:database_id}
+      host:
+        name: ${_param:single_address}
+    zookeeper:
+      connect: "${_param:cluster_node01_address}:2181,${_param:cluster_node02_address}:2181,${_param:cluster_node03_address}:2181"

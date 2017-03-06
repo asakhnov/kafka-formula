@@ -2,9 +2,9 @@
 # vim: ft=yaml
 
 # common mutualized values
-{% set version_kafka = "0.9.0.0" %}
+{% set version_kafka = "0.10.0.0" %}
 {% set version_scala = "2.11" %}
-{% set tgz_md5 = "084fb80cdc8c72dc75bc3519a5d2cc5c" %}
+{% set tgz_md5 = "f6a887ba61341071ec26c392c2a5d363" %}
 {% set parent_base_dir = "/usr/local/lib" %}
 {% set base_dir = "/".join([ parent_base_dir, "kafka"]) %}
 

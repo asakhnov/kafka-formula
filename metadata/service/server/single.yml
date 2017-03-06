@@ -1,0 +1,13 @@
+applications:
+- kafka
+classes:
+- service.kafka.support
+parameters:
+  kafka:
+    conf:
+      broker:
+        id: 0
+      host:
+        name: ${_param:single_address}
+    zookeeper:
+      connect: "${_param:single_address}:2181"
