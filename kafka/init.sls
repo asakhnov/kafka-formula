@@ -5,3 +5,4 @@ include:
   - kafka.install
   - kafka.config
   - kafka.service
+  - kafka.topics

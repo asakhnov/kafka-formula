@@ -78,3 +78,7 @@ kafka:
       connection:
         timeout:
           ms: 6000
+  topics:
+    enabled: false
+    replication: 3
+    partitions: 64
