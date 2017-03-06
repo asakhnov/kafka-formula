@@ -9,5 +9,5 @@ parameters:
         id: 0
       host:
         name: ${_param:single_address}
-    zookeeper:
-      connect: "${_param:single_address}:2181"
+      zookeeper:
+        connect: "${_param:single_address}:2181"
