@@ -4,9 +4,9 @@
 {% from "kafka/map.jinja" import kafka with context %}
 
 {%- if pillar.kafka.topics.enabled %}
-{%- for topic in kafka.topics.get('items', {}).items() %}
+{%- for topic in salt['pillar.get']('kafka:topics:names', []) %}
 
-create_topics:
+create_topic_{{ topic }}:
   cmd.run:
     - name: {{ kafka.base_dir }}/bin/kafka-topics.sh --create --zookeeper {{ kafka.conf.zookeeper.connect }} --replication-factor {{ kafka.topics.replication }} --partitions {{ kafka.topics.partitions }} --topic {{ topic }}
     - runas: root
